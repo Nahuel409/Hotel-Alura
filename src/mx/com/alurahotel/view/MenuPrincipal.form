@@ -124,7 +124,7 @@
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Desarrollado por Eduardo Reyes Hern&#xe1;ndez &#xa9; 2022"/>
+            <Property name="text" type="java.lang.String" value="Desarrollado por Diego Villan -  2023"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
           <Constraints>

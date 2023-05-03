@@ -9,10 +9,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-/**
- *
- * @author Eduardo Reyes Hernández
- */
+
 public class JPanelTransparente extends JPanel {
     
     private Image imagen;

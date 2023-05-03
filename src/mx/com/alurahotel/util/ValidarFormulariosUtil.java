@@ -23,7 +23,8 @@ public class ValidarFormulariosUtil {
     public static boolean esFormularioHuespedValido(String nombre,
             String apellido, JDateChooser fechaNac, String tel) {
         String regexNombre = "^(?=.{3,25}$)([A-ZÁÉÍÓÚ][a-záéíóúñ]+(?:[\\s]{1}[A-ZÁÉÍÓÚ][a-záéíóúñ]+)*)$";
-        String regexTel = "^([\\d]{2}[\\-]){4}[\\d]{2}$";
+       //String regexTel = "^([\\d]{2}[\\-]){4}[\\d]{2}$";
+       String regexTel = "^[\\d]{6,}$";
         Pattern patternNombre = Pattern.compile(regexNombre);
         Pattern patternTelefono = Pattern.compile(regexTel);
         Matcher matchNombre = patternNombre.matcher(nombre);

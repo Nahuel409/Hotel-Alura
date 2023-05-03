@@ -162,7 +162,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         btnCerrar.setForeground(new java.awt.Color(204, 204, 204));
         btnCerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnCerrar.setText("x");
-        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCerrar.setOpaque(true);
         btnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -181,7 +181,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         btnMinimizar.setForeground(new java.awt.Color(204, 204, 204));
         btnMinimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnMinimizar.setText("-");
-        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnMinimizar.setOpaque(true);
         btnMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -236,6 +236,11 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
         seleccionNacionalidad.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         seleccionNacionalidad.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(12, 138, 199), new java.awt.Color(12, 138, 199)));
+        seleccionNacionalidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seleccionNacionalidadActionPerformed(evt);
+            }
+        });
 
         jLabelTextoTelefono.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelTextoTelefono.setForeground(new java.awt.Color(204, 204, 204));
@@ -253,14 +258,13 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
         campoNumeroReserva.setBackground(new java.awt.Color(60, 63, 65));
         campoNumeroReserva.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        campoNumeroReserva.setForeground(new java.awt.Color(0, 0, 0));
         campoNumeroReserva.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campoNumeroReserva.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(12, 138, 199), new java.awt.Color(12, 138, 199)));
         campoNumeroReserva.setDisabledTextColor(new java.awt.Color(0, 0, 0));
 
         btnGuardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/com/alurahotel/imagenes/disquete.png"))); // NOI18N
-        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnGuardar.setOpaque(true);
         btnGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -276,7 +280,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
         btnCancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/com/alurahotel/imagenes/cancelar.png"))); // NOI18N
-        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCancelar.setOpaque(true);
         btnCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -292,7 +296,7 @@ public class RegistrarHuesped extends javax.swing.JFrame {
 
         btnMenuUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnMenuUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/com/alurahotel/imagenes/cerrar-sesion 32-px.png"))); // NOI18N
-        btnMenuUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnMenuUsuario.setOpaque(true);
         btnMenuUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -484,6 +488,10 @@ public class RegistrarHuesped extends javax.swing.JFrame {
         evt.consume();
         btnMenuUsuario.setBackground(ColoresComponentesUtil.GRIS_OSCURO);
     }//GEN-LAST:event_btnMenuUsuarioMouseExited
+
+    private void seleccionNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionNacionalidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seleccionNacionalidadActionPerformed
 
     /**
      * @param args the command line arguments

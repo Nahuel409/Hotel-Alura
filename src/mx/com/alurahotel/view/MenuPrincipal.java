@@ -24,8 +24,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     private void configurarColoresComponentes() {
-        setBackground(ColoresComponentesUtil.TRANSPARENTE);
-        panelMenuLogin.setBackground(ColoresComponentesUtil.TRANSPARENTE);
+        setBackground(ColoresComponentesUtil.GRIS_OSCURO);
+        panelMenuLogin.setBackground(ColoresComponentesUtil.GRIS_OSCURO);
         btnCerrar.setBackground(ColoresComponentesUtil.GRIS_OSCURO);
         btnMinimizar.setBackground(ColoresComponentesUtil.GRIS_OSCURO);
         btnLogin.setBackground(ColoresComponentesUtil.GRIS_OSCURO);
@@ -86,7 +86,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnCerrar.setForeground(new java.awt.Color(204, 204, 204));
         btnCerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnCerrar.setText("x");
-        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCerrar.setOpaque(true);
         btnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -105,7 +105,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnMinimizar.setForeground(new java.awt.Color(204, 204, 204));
         btnMinimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnMinimizar.setText("-");
-        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnMinimizar.setOpaque(true);
         btnMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -124,7 +124,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabelAutor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelAutor.setForeground(new java.awt.Color(204, 204, 204));
         jLabelAutor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelAutor.setText("Desarrollado por Eduardo Reyes Hernández © 2022");
+        jLabelAutor.setText("Desarrollado por Diego Villan -  2023");
         jLabelAutor.setOpaque(true);
         panelPrincipal.add(jLabelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 910, 30));
 
@@ -145,7 +145,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         btnLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/com/alurahotel/imagenes/login.png"))); // NOI18N
-        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnLogin.setOpaque(true);
         btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -162,7 +162,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         btnSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/com/alurahotel/imagenes/cerrar-sesion 32-px.png"))); // NOI18N
-        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnSalir.setOpaque(true);
         btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -227,7 +227,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void btnLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseEntered
         evt.consume();
-        btnLogin.setBackground(ColoresComponentesUtil.GRIS_CLARO);
+        btnLogin.setBackground(ColoresComponentesUtil.AZUL_CLARO);
     }//GEN-LAST:event_btnLoginMouseEntered
 
     private void btnLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseExited

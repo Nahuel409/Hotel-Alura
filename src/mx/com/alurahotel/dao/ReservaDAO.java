@@ -133,18 +133,7 @@ public class ReservaDAO {
         }
     }
 
-    /**
-     * Permite actualizar el registro en la Base de Datos, tomando los valores
-     * del controlador.
-     *
-     * @param idReserva - Clave de la reserva para tomar referencia del
-     * registro.
-     * @param fechaEntrada - Fecha de entrada del húesped.
-     * @param fechaSalida - Fecha de salida del húesped.
-     * @param valorReserva - Valor monetario de la reserva.
-     * @param formaPago - Forma de pago del húesped.
-     * @return - Retrora el número de registros actualizados.
-     */
+ 
     public int actualizar(String idReserva, Date fechaEntrada,
             Date fechaSalida, double valorReserva, String formaPago) {
         try {

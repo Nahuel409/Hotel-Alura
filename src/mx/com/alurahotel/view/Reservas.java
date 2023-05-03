@@ -57,13 +57,7 @@ public class Reservas extends javax.swing.JFrame {
         btnCerrar.setBackground(ColoresComponentesUtil.GRIS_OSCURO);
     }
 
-    /**
-     * Este método no envía el registro en la capa DAO a la Base de Datos, en
-     * caso de cancelación del registro, para evitar carga de conexión con la
-     * base de datos, los datos se almacenan en un objeto y son extraídos hasta
-     * que el botón de guardado del formulario de registro de húespedes haya
-     * sido completado y guardado..
-     */
+
     private void guardarReferenciaReserva() {
         if (ValidarFormulariosUtil.esFormularioReservaValido(fechaCheckIn, fechaCheckOut, campoValorReserva.getText(), seleccionFormaPago)) {
 
@@ -92,25 +86,9 @@ public class Reservas extends javax.swing.JFrame {
         seleccionFormaPago.setSelectedIndex(0);
     }
 
-    /**
-     * Método para cálcular el valor monetario total en Pesos Mexicanos con una
-     * tasa fija de 550.00 por día, con la diferencia de días obtenida de los
-     * campos fechaCheckIn y fechaCheckOut.
-     *
-     * El valor obtenido se asigna al campo campoValorReserva através del evento
-     * PropertyChangeEvent.
-     *
-     * El valor de diferencia de fechas fue realizando la conversión de las
-     * fechas de tipo Date a LocalDate, para luego calcular la diferencia de
-     * días con ChronoUnit.DAYS.between.
-     *
-     * @param fechaEntrada - Fecha de tipo JDateChooser fechaCheckIn.getDate()
-     * @param fechaSalida - Fecha de tipo JDateChooser fechaCheckOut.getDate()
-     * @return - (BigDecimal) Retorna el resultado de la diferencia de días por
-     * el valor de reserva de 550.00.
-     */
+   
     public BigDecimal calcularValorReserva(JDateChooser fechaEntrada, JDateChooser fechaSalida) {
-        BigDecimal valorTasaReservaPorDia = new BigDecimal("550.99");
+        BigDecimal valorTasaReservaPorDia = new BigDecimal("500.20");
         BigDecimal valorReserva = new BigDecimal("0.0");
         long numeroDias;
         if ((fechaEntrada.getDate() != null) && (fechaSalida.getDate() != null)) {
@@ -195,7 +173,7 @@ public class Reservas extends javax.swing.JFrame {
         btnCerrar.setForeground(new java.awt.Color(204, 204, 204));
         btnCerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnCerrar.setText("x");
-        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCerrar.setOpaque(true);
         btnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -214,7 +192,7 @@ public class Reservas extends javax.swing.JFrame {
         btnMinimizar.setForeground(new java.awt.Color(204, 204, 204));
         btnMinimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnMinimizar.setText("-");
-        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnMinimizar.setOpaque(true);
         btnMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -269,6 +247,11 @@ public class Reservas extends javax.swing.JFrame {
         campoValorReserva.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campoValorReserva.setText("0.0");
         campoValorReserva.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(12, 138, 199), new java.awt.Color(12, 138, 199)));
+        campoValorReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoValorReservaActionPerformed(evt);
+            }
+        });
 
         jLabelTextoFormaPago.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelTextoFormaPago.setForeground(new java.awt.Color(204, 204, 204));
@@ -284,7 +267,7 @@ public class Reservas extends javax.swing.JFrame {
         btnContinuarReservas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnContinuarReservas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mx/com/alurahotel/imagenes/calendario.png"))); // NOI18N
         btnContinuarReservas.setText("Continuar");
-        btnContinuarReservas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnContinuarReservas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnContinuarReservas.setOpaque(true);
         btnContinuarReservas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -433,6 +416,10 @@ public class Reservas extends javax.swing.JFrame {
         evt.getPropertyName();
         calcularValorReserva(fechaCheckIn, fechaCheckIn);
     }//GEN-LAST:event_fechaCheckOutPropertyChange
+
+    private void campoValorReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoValorReservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoValorReservaActionPerformed
 
     /**
      * @param args the command line arguments
